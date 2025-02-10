@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: spring-ai-function-calling
+  ai:
+    openai:
+      api-key: ${OPEN_API_KEY:}
+
+  sql:
+    init:
+      mode: always
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:mydatabase
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+
+external:
+  news:
+    url: ${NEWS_AP_URL:https://api.mediastack.com/v1/news}
+    key: ${NEWS_API_KEY:}
